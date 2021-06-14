@@ -33,5 +33,28 @@
     background: #84dcf4;
 }
 
+.sticky {
+    width: 200px;
+    height: 180px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 6px 6px 3px gray;
+    float: left;
+}
+
+.sticky textarea {
+    width: 95%;
+    height: 95%;
+    font-size: 20px;
+    font-family: cursive;
+    border: none;
+    background: transparent;
+    resize: none;
+}
+
+.sticky textarea:focus {
+    outline: none;
+}
 
 
