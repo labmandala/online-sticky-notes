@@ -7,6 +7,9 @@ $(document).ready(function() {
         id++;
         $("#container").append(newNote);
     });
+    $("#container").on("click", ".sticky", function(){
+        currentElement = $(this).attr("id");
+    });
     $(".box").click(function() {
         if (currentElement != "") {
             var color = $(this).attr("class").split(" ")[0];
