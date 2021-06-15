@@ -10,7 +10,8 @@ $(document).ready(function() {
     $(".box").click(function() {
         if (currentElement != "") {
             var color = $(this).attr("class").split(" ")[0];
-            $("#" + currentElement).addClass(color);
+            $("#" + currentElement).removeClass();
+            $("#" + currentElement).addClass("sticky " + color);
         }
     });
 });
