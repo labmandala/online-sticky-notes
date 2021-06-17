@@ -10,6 +10,10 @@ $(document).ready(function() {
     $("#container").on("click", ".sticky", function(){
         currentElement = $(this).attr("id");
     });
+    $("#container").on("click", "textarea", function(){
+        var maximum = getMax(".sticky");
+        $(this).parent().css("z-index", (maximum+1));
+    });
     $(".box").click(function() {
         if (currentElement != "") {
             var color = $(this).attr("class").split(" ")[0];
@@ -18,3 +22,18 @@ $(document).ready(function() {
         } 
     });
 });
+
+function getMax(items) {
+    var max = 0;
+    $(items).each(function() {
+        var z = $(this).css("z-index");
+        if (z == "auto") {
+            z = 1;
+        } 
+        max = Math.max(max, z);
+    });
+    return max;
+}
+
+
+
