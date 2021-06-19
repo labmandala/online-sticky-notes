@@ -52,6 +52,7 @@
     border: none;
     background: transparent;
     resize: none;
+    overflow: hidden;
 }
 
 .sticky textarea:focus {
