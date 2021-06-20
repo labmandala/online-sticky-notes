@@ -53,10 +53,17 @@
     background: transparent;
     resize: none;
     overflow: hidden;
+    position: absolute;
 }
 
 .sticky textarea:focus {
     outline: none;
+}
+
+.ui-icon-close {
+    float: right;
+    cursor: pointer;
+    color: black;
 }
 
 

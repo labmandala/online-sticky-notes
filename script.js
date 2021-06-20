@@ -2,7 +2,7 @@ $(document).ready(function() {
     var id = 1;
     var currentElement = "";
 	$("#btnNew").click(function() {
-        var newNote = $("<div class='sticky green' id='sticky" + id +"'><textarea>Add Your Note</textarea></div>").draggable({stack:".sticky"});
+        var newNote = $("<div class='sticky green' id='sticky" + id +"'><textarea>Add Your Note</textarea><span class='ui-icon ui-icon-close'></span></div>").resizable().draggable({stack:".sticky"});
         currentElement = "sticky" + id;
         id++;
         $("#container").append(newNote);
