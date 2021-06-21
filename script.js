@@ -10,6 +10,9 @@ $(document).ready(function() {
     $("#container").on("click", ".sticky", function(){
         currentElement = $(this).attr("id");
     });
+    $("#container").on("click", "span.ui-icon-close", function(){
+        $(this).parent().remove();
+    });
     $("#container").on("click", "textarea", function(){
         var maximum = getMax(".sticky");
         $(this).parent().css("z-index", (maximum+1));
